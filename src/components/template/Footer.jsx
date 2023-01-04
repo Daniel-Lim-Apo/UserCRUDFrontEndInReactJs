@@ -3,5 +3,7 @@ import './Footer.css';
 
 export default props =>
     <footer className="footer">
-        Footer
+        <span>
+            Copyright 2023 - Daniel Lim-Apo
+        </span>
     </footer>
