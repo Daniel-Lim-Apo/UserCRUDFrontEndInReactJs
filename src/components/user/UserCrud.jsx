@@ -40,9 +40,40 @@ export default class UserCrud extends Component {
 
     getUpdatedList(user){
         // Create a new list without the user  
-        const list = this.state.list.filter(u => u.id !== user.id)
+        const list = this.state.list.filter(u => u.id !== user.id);
         // Then put the user at the start of the list
-        list.unshift(user)
+        list.unshift(user);
+    }
+
+    updateField(event) {
+        const user = { ...this.state.user };
+        user[event.target.name] = event.target.value;
+        this.setState({ user })
+    }
+
+    renderForm(){
+        return(
+            <div className="form">
+                <div className="row">
+                    <div className="col-12 cold-md-6">
+                        <div className="form-group">
+                            <label>
+                                Name
+                            </label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    renderTable(){
+
+    }
+
+    renderRow(){
+
     }
 
     render() {
